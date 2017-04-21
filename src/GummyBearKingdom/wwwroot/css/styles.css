@@ -1,0 +1,66 @@
+﻿
+
+
+
+.main img{
+   height: 2000px;
+   width: 100%;
+}
+
+.font a{
+    font-size: 100px;
+    text-align: center;
+    color: lemonchiffon;
+    text-decoration: none;
+}
+
+.main-page{
+       background-color: rgb(182, 248, 247);
+}
+
+
+.logo{
+    font-family: 'Permanent Marker', cursive;
+    color: deeppink;
+    text-align:center;
+    font-size: 100px;
+}
+
+.nav-bar{
+    text-align: center;
+    color:hotpink;
+}
+
+.nav-bar a {
+    color:hotpink;
+}
+
+
+.product img{
+    height: 300px !important;
+
+}
+.content-product a{
+    color:rgb(182, 248, 247);
+    font-size: 20px;
+    text-align: center;
+}
+
+.product {
+    margin-top:40px;
+}
+
+.content-product .name a{
+    color: deeppink;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.names{
+    color: dodgerblue;
+}
+
+.details{
+    color: lightpink;
+}

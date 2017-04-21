@@ -1,12 +1,15 @@
 ﻿@model GummyBearKingdom.Models.Product
 
-<html>
-<head>
-    <title>Update</title>
-</head>
-<body>
-    <h2>Edit</h2>
-    <hr />
+@{
+    ViewData["Title"] = "Gummy Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="logo">Gummie<br /> Collective</h2>
+<hr />
+<p class="nav-bar"><span ="bar">CONTENT</span>   <span ="bar">@Html.ActionLink("CREATE", "Create")</span>   <span ="bar">@Html.ActionLink("SHOP", "Index")</span>   <span ="bar">ABOUT</span>   <span ="bar">CONTACT</span></p>
+<hr />
+
     <h4>Edit this product: @Html.DisplayFor(model => model.Name)</h4>
 
     @using (Html.BeginForm())
@@ -29,5 +32,3 @@
     }
     <p>@Html.ActionLink("Product List", "Index")</p>
 
-</body>
-</html>

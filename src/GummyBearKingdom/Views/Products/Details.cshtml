@@ -1,17 +1,26 @@
 ﻿@model GummyBearKingdom.Models.Product
 
-<html>
-<head>
-    <title>GummyBearKingdom - Details</title>
-</head>
-<body>
-    <h2>Details</h2>
-    <hr />
-    <img src="@Html.DisplayFor(model => model.Image)" alt="Alternate Text" />
-    <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
-    <p>$ @Html.DisplayFor(model => model.Cost) per Bear</p>
-    <p>@Html.DisplayNameFor(model => model.CountryOfOrigin): @Html.DisplayFor(model => model.CountryOfOrigin)</p>
+@{
+    ViewData["Title"] = "Gummy Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="logo">Gummie<br /> Collective</h2>
+<hr />
+<p class="nav-bar"><span ="bar">CONTENT</span>   <span ="bar">@Html.ActionLink("CREATE", "Create")</span>   <span ="bar">@Html.ActionLink("SHOP", "Index")</span>   <span ="bar">ABOUT</span>   <span ="bar">CONTACT</span></p>
+<hr />
+<div class="container">
+    <div class="row details">
+        <div class="col-md-6">
+            <img src="@Html.DisplayFor(model => model.Image)" alt="Alternate Text" />
+        </div>
+        <div class="col-md-6">
+            <h1 class="names">@Html.DisplayFor(model => model.Name)</h1>
+            <h2 class="details">$ @Html.DisplayFor(model => model.Cost) per Bear</h2>
+            <h2 class="details">@Html.DisplayNameFor(model => model.CountryOfOrigin): @Html.DisplayFor(model => model.CountryOfOrigin)</h2>
+        </div>
 
-    <p>@Html.ActionLink("Back to list", "Index")</p>
-</body>
-</html>
+
+    </div>
+
+
+</div>

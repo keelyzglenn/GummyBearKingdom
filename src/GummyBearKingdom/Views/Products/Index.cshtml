@@ -1,19 +1,31 @@
 ﻿@model IEnumerable<GummyBearKingdom.Models.Product>
 
-<html>
-<head>
-    <title>To Do List</title>
-</head>
-<body>
-    <h2>To Do List</h2>
-    <h4>@Html.DisplayNameFor(model => model.Name)</h4>
-    <ul>
+@{
+    ViewData["Title"] = "Gummy Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="logo">Gummie<br /> Collective</h2>
+<hr />
+<p class="nav-bar"><span ="bar">CONTENT</span>   <span ="bar">@Html.ActionLink("CREATE", "Create")</span>   <span ="bar">@Html.ActionLink("SHOP", "Index")</span>   <span ="bar">ABOUT</span>   <span ="bar">CONTACT</span></p>
+<hr />
+           <div class="container">
+   
+            <div class="row col-md-12">
         @foreach (var product in Model)
         {
-            <li> @Html.ActionLink((string) product.Name, "Details", new { id = product.ProductId }) | @Html.ActionLink("Edit", "Edit", new { id = product.ProductId }) | @Html.ActionLink("Delete", "Delete", new { id = product.ProductId })</li>
+               <div class="col-md-4 products">
+                <div class="product">
+                    <img src="@Html.DisplayFor(modelProduct => product.Image)" alt="Alternate Text" />
+                </div>
+                <div class="content-product">
+                     <p class="name">@Html.ActionLink((string)product.Name, "Details", new { id = product.ProductId })</p>  
+                    <p>@Html.ActionLink("Edit", "Edit", new { id = product.ProductId }) | @Html.ActionLink("Delete", "Delete", new { id = product.ProductId })</p> 
+                </div>
+                </div>
         }
-    </ul>
+           </div>
+            </div>
 
-    <p>@Html.ActionLink("Add new item", "Create")</p>
-</body>
-</html>
+    @*<p>@Html.ActionLink("Add new item", "Create")</p>*@

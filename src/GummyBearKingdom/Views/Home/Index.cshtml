@@ -1,11 +1,14 @@
-﻿<html>
-<head>
-    <title>GummyBearKingdom</title>
-</head>
-<body>
-    <h2>Gummy Bears!</h2>
-
-    <p>@Html.ActionLink("Products", "Index", "Products")</p>
+﻿@{
+    ViewData["Title"] = "Gummy Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
  
-</body>
-</html>
+ <div class="main-page">
+
+   
+
+<div class="main">
+     <img src="~/images/mainpage.png" alt="Alternate Text" />
+</div>
+     <p class="font">@Html.ActionLink("Enter Here", "Index", "Products")</p>
+    </div>
