@@ -1,0 +1,29 @@
+﻿@model GummyBearKingdom.Models.Product
+
+<html>
+<head>
+    <title>Create</title>
+</head>
+<body>
+    <h2>Create</h2>
+    <hr />
+    <h4>Add a new product</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+
+        @Html.LabelFor(model => model.Cost)
+        @Html.TextBoxFor(model => model.Cost)
+
+        <label>Country</label>
+        @Html.TextBoxFor(model => model.CountryOfOrigin)
+
+        <label>Image</label>
+        @Html.TextBoxFor(model => model.Image)
+
+        <input type="submit" value="Add new task" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</body>
+</html>
