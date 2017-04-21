@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GummyBearKingdom.Models.Product>
+
+<html>
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+    <h2>To Do List</h2>
+    <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+    <ul>
+        @foreach (var product in Model)
+        {
+            <li>@Html.DisplayFor(modelProduct => product.Name)</li>
+        }
+    </ul>
+</body>
+</html>
