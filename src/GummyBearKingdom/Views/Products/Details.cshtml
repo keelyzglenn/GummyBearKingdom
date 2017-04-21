@@ -9,7 +9,7 @@
     <hr />
     <img src="@Html.DisplayFor(model => model.Image)" alt="Alternate Text" />
     <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
-    <p>$@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost) per Bear</p>
+    <p>$ @Html.DisplayFor(model => model.Cost) per Bear</p>
     <p>@Html.DisplayNameFor(model => model.CountryOfOrigin): @Html.DisplayFor(model => model.CountryOfOrigin)</p>
 
     <p>@Html.ActionLink("Back to list", "Index")</p>
